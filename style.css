@@ -1,0 +1,156 @@
+:root {
+    --clr-backdrop: #c7c3c0;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100dvh;
+    background: #f7f3f0;
+    display: grid;
+    margin: 0;
+    z-index: -1;
+}
+
+body>* {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+.backdrop {
+    background: var(--clr-backdrop);
+    filter: blur(26px);
+    opacity: .9;
+    border-radius: 12px;
+    z-index: -1;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    color: #111;
+    text-shadow:
+        0 1px 2px #1119,
+        0 2px 4px #3336;
+    
+    text-transform: uppercase;
+}
+
+.ctrls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+button {
+    position: relative;
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #c7c3c0;
+    box-shadow:
+        #0006 10px 10px 8px,
+        #fff 1.5px 1.5px 2px 0px inset,
+        #c7c3c0 -3.2px -3.2px 8px 0px inset;
+    
+    transition: 0.1s ease-in-out;
+}
+
+button:active {
+    box-shadow:
+        #0006 0px 0px 0px,
+        #000 0.5px 0.5px 4px inset,
+        #c7c3c0 -3.2px -3.2px 8px 0px inset;
+}
+
+button:before {
+    content: "";
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 182px;
+    opacity: 0.32;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.button3 {
+    background-color: #d42a02;
+    box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px, #fb702c 2px 2px 10px 0px inset,
+        #d42a02 -4px -4px 1px 0px inset;
+}
+
+.button4 {
+    background-color: #545251;
+    box-shadow: rgba(0, 0, 0, 0.377) 10px 10px 8px,
+        #a8a6a4 1.5px 1.5px 1px 0px inset, #545251 -3.2px -3.2px 8px 0px inset;
+}
+
+.button3:active {
+    box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+        #d42a02 -3.2px -3.2px 8px 0px inset;
+}
+
+.button4:active {
+    box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000,
+        #545251 -3.2px -3.2px 8px 0px inset;
+}
+
+.engraved {
+    --clr-bg: #666;
+    --clr-sh: #f5f5f580;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: var(--clr-bg);
+    background-clip: text;
+    color: transparent;
+    text-shadow: var(--clr-sh) 1px 1px 1px;
+    transition: 0.1s ease-in-out;
+}
+
+button:active .engraved {
+    display: block;
+    transform: translateY(1px);
+}
+
+.button3 .engraved {
+    --clr-bg: #921;
+    --clr-sh: #FFB4A3;
+}
+
+.button4 .engraved {
+    --clr-bg: #000;
+    --clr-sh: var(--clr-backdrop);
+}
+
+.btn {
+    display: grid;
+    place-content: center;
+    max-width: 5.4rem;
+    aspect-ratio: 1;
+    padding: .1rem;
+    background-color: #171717;
+    border-radius: 5px;
+}
+
+.btn1,
+.btn3 {
+    place-self: end;
+}
+
+.btn2 {
+    align-self: end;
+    justify-self: start;
+}
+
+.btn4 {
+    place-self: start;
+}
