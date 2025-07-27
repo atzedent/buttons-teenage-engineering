@@ -29,6 +29,7 @@ body>* {
     border-radius: 12px;
     z-index: -1;
 }
+
 .backdrop::after {
     content: "";
     position: absolute;
