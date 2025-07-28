@@ -230,10 +230,6 @@ button:where([data-active="true"]) .engraved {
     border-radius: 5px;
 }
 
-.btn:has(button:focus-within) {
-    border-radius: 10px;
-}
-
 .btn1,
 .btn3 {
     place-self: end;
